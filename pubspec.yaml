@@ -1,0 +1,33 @@
+name: location_web
+description: The web implementation of the location plugin.
+version: 4.2.0
+homepage: https://github.com/Lyokone/flutterlocation
+repository: https://github.com/Lyokone/flutterlocation
+issue_tracker: https://github.com/Lyokone/flutterlocation/issues
+publish_to: none
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+  flutter: '>=3.13.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  http_parser: ^4.0.2
+  location_platform_interface:
+    git: https://github.com/kumsumit/location_platform_interface.git
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockito:
+    git: https://github.com/kumsumit/mockito.git
+
+flutter:
+  plugin:
+    platforms:
+      web:
+        pluginClass: LocationWebPlugin
+        fileName: location_web.dart
